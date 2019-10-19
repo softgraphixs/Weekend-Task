@@ -1,0 +1,80 @@
+$lightBlue:#B7E9F7;
+$mediumBlue: #92DFF3;
+$DarkBlue : #7AD7F0;
+$Blue: #003A5D;
+$white : #ffffff;
+.wrapper{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'loto', 'san-serif'; 
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 1.7;
+    color: #7777;
+    padding: 1 0px;
+}
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,  
+        rgba(122, 214, 240, 0.8),
+        rgba(146, 224, 243, 0.8),), 
+        url(../images/bg3.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.logo{
+    height: 35px;
+    width: 35px;
+}
+.text-box{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+.heading-primary{
+    color: $white;
+    text-transform: uppercase;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: lato, sans-serif;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    // animation-delay: ;
+}
+.heading-primary-sub{
+    color: $Blue;
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: lato, sans-serif;
+    letter-spacing: 15px;
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px); 
+    }
+    80%{
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
