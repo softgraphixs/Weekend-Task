@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../../assets/styles/HomeStyle.scss'
+import {Link} from 'react-router-dom'
 import logos from '../../assets/images/Android-app-course.jpg'
 class HomePage extends Component {
     render() {
@@ -16,6 +17,9 @@ class HomePage extends Component {
                     <span className="heading-primary-main">Sol_Tech</span>
                     <span className="heading-primary-sub">we collaborate Tech ideas</span>
                 </h1>
+                <Link>
+                <button></button>
+                </Link>
                 </div>
             </header>
             </div>

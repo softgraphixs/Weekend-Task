@@ -36,6 +36,9 @@ $white : #ffffff;
     height: 35px;
     width: 35px;
 }
+.logo:hover {
+    animation: moveInRight 1s ease-out;
+}
 .text-box{
     position: absolute;
     top: 45%;
@@ -45,6 +48,8 @@ $white : #ffffff;
 .heading-primary{
     color: $white;
     text-transform: uppercase;
+
+    backface-visibility: hidden;
 }
 .heading-primary-main{
     display: block;
@@ -52,17 +57,26 @@ $white : #ffffff;
     font-weight: 700;
     font-family: lato, sans-serif;
     letter-spacing: 35px;
+
+    // animation properties
     animation-name: moveInLeft;
     animation-duration: 2s;
-    // animation-delay: ;
+    animation-timing-function: ease-out;
+    // animation-iteration-count: 2;
+    // animation-delay: 1s;
+
 }
 .heading-primary-sub{
     color: $Blue;
     display: block;
     font-size: 12px;
-    font-weight: 300;
+    font-weight: 700;
     font-family: lato, sans-serif;
-    letter-spacing: 15px;
+    letter-spacing: 9px;
+
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes moveInLeft {
@@ -72,6 +86,20 @@ $white : #ffffff;
     }
     80%{
         transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px); 
+    }
+    80%{
+        transform: translateX(-20px);
     }
     100%{
         opacity: 1;
